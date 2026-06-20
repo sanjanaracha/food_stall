@@ -44,39 +44,6 @@ if opt=="Delete":
 
 if opt=="Put":
     input=int(st.number_input("id"))
-
-    # if st.button("Get Details"):
-    #     res = requests.get(
-    #     f"{s_url}/foods/{input}"
-    # )
-
-    #     if res.status_code == 200:
-
-    #         data = res.json()
-
-    #         if data:
-
-    #             st.session_state["food_name"] = data["food_name"]
-    #             st.session_state["price"] = data["price"]
-    #             st.session_state["quantity"] = data["quantity"]
-
-    #         else:
-    #             st.error("Food ID not found")
-
-    # food_name = st.text_input(
-    #     "Food Name",
-    #     value=st.session_state.get("food_name", "")
-    # )
-
-    # price = st.number_input(
-    #     "Price",
-    #     value=float(st.session_state.get("price", 0.0))
-    # )
-
-    # quantity = st.number_input(
-    #     "Quantity",
-    #     value=int(st.session_state.get("quantity", 0))
-    # )
     if input:
 
         res = requests.get(f"{s_url}/update/{input}")
